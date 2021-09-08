@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+html{
+    scroll-behavior:smooth;
+}
+
 body {
     display:grid;
     grid-template-columns:1fr 85% 1fr;
@@ -6,19 +13,85 @@ body {
     height:auto;
 }
 
+h1, h2{
+    font-weight:normal;
+}
+
 header {
     grid-row:1;
     grid-column:1/4;
-    background-color:pink;
+    background-color:black;
 }
 
 header p {
     padding:10px;
 }
 
-h1, h2{
-    font-weight:normal;
+header a.logo {
+    text-decoration:none;
+    display:inline-block;
+    color:white;
+    font-family:DM Serif Display;
+    font-size:2.25em;
+    margin-left:2%;
+    margin-top:0.75%;
+    overflow:none;
 }
+
+header nav {
+    overflow:hidden;
+    float:right;
+    width:32.5%;
+}
+
+header nav ul{
+    list-style:none;
+    margin-top:5%;
+    padding:0;
+}
+
+header nav li{
+    display:inline-block;
+    padding:0 10px;
+    margin-right:5%;
+}
+
+header nav a{
+    font-family:DM Sans;
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+    font-size:20px;
+}
+
+nav li.dropdown:hover .dropdown-content {
+    display: block;
+    text-align:center;
+  }
+
+nav li a:hover{
+    text-decoration:underline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:white;
+    z-index: 1;
+    width:8%;
+}
+
+.dropdown-content a {
+    color:black;
+    padding: 10px 5px;
+    text-decoration: none;
+    text-align:left;
+}
+
+.dropdown-content a:hover{
+    text-decoration:underline;
+}
+
 
 .wrapper {
     grid-row:2;
@@ -32,8 +105,8 @@ h1, h2{
 /* index page css */
 .box1 {
     grid-column:1/5;
-    background-color:yellow;
     height:650px;
+    border:1px solid black;
 }
 
 .box1 p {
@@ -49,32 +122,62 @@ h1, h2{
 .box2 {
     grid-column:2/4;
     margin:3.5% 10% 0;
-    background-color:orange;
-    height:400px;
+    height:auto;
 }
 
 .box2 p {
-    padding:10px;
+    text-align:center;
+    font-size:35px;
+    margin-bottom:0;
 }
 
 .subtitle {
     grid-column:2/4;
-    margin:3.5% 30% 0;
-    background-color:grey;
+    margin:5% 30% 0;
 }
 
 .subtitle p {
-    padding:10px;
+    font-size:40px;
+    text-align:center;
+    margin:0;
 }
-
 
 .left{
     grid-column:2/3;
     margin-top:5%;
     border:1px solid black;
     width:100%;
-    height:250px;
-    background-color:lime;
+    height:300px;
+    text-align:center;
+}
+
+.left h1{
+    margin:10% 0 0;
+    font-size:40px;
+}
+
+.left p{
+    font-size:25px;
+    margin-top:5px;
+    margin-bottom:0;
+}
+
+.left a{
+    display:inline-block;
+    background-color:#CCB4E7;
+    color:white;
+    text-decoration:none;
+    padding:20px 15px;
+    border:1px solid #9673A6;
+    margin-top:5%;
+    font-size:20px;
+    border-radius:10px;
+}
+
+.left a:hover{
+    text-decoration:underline;
+    background-color:#b196d0;
+    transition:0.2s;
 }
 
 .right {
@@ -82,10 +185,40 @@ h1, h2{
     margin-top:5%;
     border:1px solid black;
     width:100%;
-    height:250px;
-    background-color:greenyellow;
+    height:300px;
+    text-align:center;
+}
+
+.right h1{
+    margin:10% 0 0;
+    font-size:40px;
+}
+
+.right p{
+    font-size:25px;
+    margin-top:5px;
+    margin-bottom:0;
+}
+
+.right a{
+    display:inline-block;
+    background-color:#CCB4E7;
+    color:white;
+    text-decoration:none;
+    padding:20px 15px;
+    margin-top:5%;
+    border-radius:10px;
+    border:1px solid #9673A6;
+    font-size:20px;
+}
+
+.right a:hover{
+    text-decoration:underline;
+    background-color:#b196d0;
+    transition:0.2s;
 }
 /* end of index page css */
+
 
 /* quiz page css */
 .quiz-page{
@@ -97,46 +230,102 @@ h1, h2{
     text-align:center;
 }
 
-.quizbox{
+#quiz{
     background-color:#ccb4e7;
     border:1px solid #9673A6;
-    margin:0% 7.5% 0;
+    margin:0 7.5%;
     color:white;
 }
 
-.quizbox h1{ 
+#quiz h1{ 
     text-align:center;
     margin-top:5%;
     color:white;
 }
 
-.quizbox h2{
-    float:right;
-    padding-right:80px;
-    margin-top:-2%;
+#quiz h2{
+    right:10%;
+    position:absolute;
+    margin:-2% 0 0;
+    width:10%;
 }
 
-.quizbox p{
+#quiz .choices{
     text-align:center;
-    margin-top:15%;
-    margin-bottom:5%;
+    margin:0 auto;
 }
 
-.quizbox button{
+
+.choicebox{
+    display:inline-block;
+    height:auto;
+    width:20%;
+    margin-top:2%;
+}
+
+.choicebox .placeholder{
+    width:85%;
+    height:170px;
+    border:1px solid white;
+    margin:0 auto;
+}
+
+.choicebox p{
+    display:inline-block;
+    font-size:25px;
+}
+
+.choicebox input{
+    margin:0 15px 0 -5px;
+}
+
+#quiz #submit{
 	background-color:#9673A6;
 	border:none;
-	padding:15px 30px;
+	padding:12px 30px;
 	cursor:pointer;
 	color:white;
-	margin:0 auto;
+	margin:2% auto;
 	display:block;
+    border-radius:10px;
+}
+
+#yourresult{
+    display:none;
+    height:auto;
+    min-height:320px;
+    padding-bottom:35px;
+    margin:0 7.5%;
+    background-color:#ccb4e7;
+    border:1px solid #9673A6;
+    text-align:center;
+    color:white;
+}
+
+#yourresult #resulthead {
+    font-size:40px;
+}
+
+#yourresult #result{
+    font-size:25px;
+    margin:0 10% 5%;
+    line-height:1.2;
+}
+
+#yourresult #redirect a{
+    font-size:20px;
+    color:white;
+    text-decoration:none;
+}
+
+#yourresult #redirect a:hover{
+    text-decoration:underline;
 }
 /* end of quiz page css */
 
 /* article list page css */
 .article-list{
     grid-column:2/4;
-    background-color:khaki;
     height:auto;
 }
 
@@ -144,19 +333,43 @@ h1, h2{
     text-align:center;
 }
 
+.article-list p.subheading{
+    margin:0;
+    text-align:center;
+    font-size:20px;
+}
+
 .article-list .image{
     width:25%;
     height:180px;
     margin-left:5%;
     margin-bottom:3%;
-    background-color:lightgreen;
+    border:1px solid black;
+    display:inline-block;
+}
+
+.article-list .image-first{
+    width:25%;
+    height:180px;
+    margin:2% 0 3% 5%;
+    border:1px solid black;
     display:inline-block;
 }
 
 .article-list .title{
-    background-color:lightblue;
     width:40%;
     display:inline-block;
+}
+
+.article-list .title a{
+    text-decoration:none;
+    color:black;
+    font-size:30px;
+    padding-left:20px;
+}
+
+.article-list .title a:hover{
+    text-decoration:underline;
 }
 
 .article-list h2{
@@ -164,6 +377,7 @@ h1, h2{
     padding:0;
     margin-top:1.75%;
 }
+
 
 .article-list .nav-buttons{
     text-align:center;
@@ -180,6 +394,10 @@ h1, h2{
     border-radius:5px;
 }
 
+.article-list .nav-buttons a.page1{
+    visibility:hidden;
+}
+
 .article-list .nav-buttons a:hover{
     background-color:#9673A6;
 }
@@ -193,34 +411,48 @@ h1, h2{
 /* article page css */
 .article{
     grid-column:2/4;
-    height:1000px;
+    height:1200px;
     margin:5% 7.5% 0;
-    background-color:lightcoral;
 }
 
-.article h1, h2{
+.article h1{
     padding-left:60px;
+    font-size:40px;
+    margin-bottom:0;
 }
 
 .article h2{
+    margin-top:0;
     padding-bottom:15px;
+    padding-left:60px;
+    font-size:18px;
 }
 
 .article .video{
     border:1px solid black;
-    height:400px;
-    margin:5% 5% 0;
+    height:450px;
+    margin:5% 5%;
 }
 
 .article p{
-    margin-top:5%;
+    padding:0 60px;
+    font-size:25px;
+    margin-bottom:0;
+    line-height:1.25em;
+}
+
+.article .content-image{
+    border:solid 1px black;
+    float:right;
+    width:30%;
+    height:200px;
+    margin:2% 60px 0 2%;
 }
 
 .similar{
     grid-column:2/4;
     height:auto;
-    margin:5% 0 0;
-    background-color:lightskyblue;
+    margin:2.5% 0 0;
 }
 
 .similar h1{
@@ -247,7 +479,18 @@ h1, h2{
     flex:1;
     text-align:center;
 }
+
+.similar a{
+    font-size:18px;
+    text-decoration:none;
+    color:black;
+}
+
+.similar a:hover{
+    text-decoration:underline;
+}
 /* end of article page css */
+
 
 /* all products page css */
 .products {
@@ -259,7 +502,6 @@ h1, h2{
 .container{
     margin-left:1.5%;
     height:auto;
-    background: mediumaquamarine;
 }
 
 .product-box{
@@ -286,11 +528,21 @@ h1, h2{
     margin:7% 9% 3%;
 }
 
+.product-box a{
+    text-decoration:none;
+    color:black;
+}
+
+.product-box a:hover{
+    text-decoration:underline;
+}
+
 .product-box p{
     margin:0 auto 2%;
 }
 
-.product-box h2{
+.product-box a.h2{
+    font-size:20px;
     margin:0;
 }
 
@@ -309,6 +561,10 @@ h1, h2{
     border-radius:5px;
 }
 
+.products .nav-buttons a.page1{
+    visibility:hidden;
+}
+
 .products .nav-buttons a:hover{
     background-color:#9673A6;
 }
@@ -322,7 +578,33 @@ h1, h2{
 footer {
     grid-column:1/4;
     grid-row:3;
-    background-color:aqua;
-    height:150px;
+    background-color:black;
+    height:auto;
+    text-align:center;
     margin-top:5%;
+    color:white;
+    bottom:0;
+}
+
+footer h1{
+    font-size:40;
+    font-family:DM Serif Display;
+    margin:0;
+    margin-top:2%;
+}
+
+footer p{
+    margin:5px 0 3%;
+}
+
+footer a{
+    position:absolute;
+    margin-top:3%;
+    margin-left:42%;
+    text-decoration:none;
+    color:white;
+}
+
+footer a:hover{
+    text-decoration:underline;
 }

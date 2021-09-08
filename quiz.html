@@ -3,44 +3,111 @@
 	<head>
 		<title>Skin type Quiz</title>
 		<link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="quiz.js"></script>
 	</head>
 
 	<body>
 		<header>
-			<p>This will be the nav</p>
+			<a href="index.html" class="logo">Skinclusive</a>
+			<nav name="top">
+				<ul>
+					<li><a href="quiz.html">skin type quiz</a></li>
+					<li class="dropdown"><a href="all-products.html">products &#9662;</a>
+						<div class="dropdown-content">
+							<a href="#">oily skin products</a>
+							<a href="#">dry skin products</a>
+							<a href="#">combo skin products</a>
+							<a href="#">sensitive skin products</a>
+						</div>
+					</li>
+					<li class="dropdown"><a href="article-list.html">articles &#9662;</a>
+						<div class="dropdown-content">
+							<a href="#">oily skin articles</a>
+							<a href="#">dry skin articles</a>
+							<a href="#">combo skin articles</a>
+							<a href="#">sensitive skin articles</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		
 		<div class="wrapper">
 			<div class="quiz-page">
 				<h1>Skin Type Quiz</h1>
 
-				<!-- This div is for the skin type quiz and is different to the other pages -->
-				<div class="quizbox">
-					<h1>Question 1 heading</h1>
-					<h2>1 / 5</h2>
-					<p>Question related images and text will go here</p>
-					<hr color="white" width="80%" size="3">
+				<!-- This form is for the skin type quiz and is different to the other pages -->
+				<form name="quiz" id="quiz">
+					<div>
+						<h1>How does your skin typically feel throughout the day?</h1>
+						<h2>1 / 5</h2>
+						<div class="choices">
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question1" value="Oily">Oily</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question1" value="Dry">Dry</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question1" value="Normal">Normal</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question1" value="Sensitive">Sensitive</p></div>
+							<hr color="white" width="80%" size="3">
+						</div>
+					</div>
+		
+					<div>
+						<h1>Lorem ipsum</h1>
+						<h2>2 / 5</h2>
+						<div class="choices">
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question2" value="Oily">Oily</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question2" value="Dry">Dry</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question2" value="Normal">Normal</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question2" value="Sensitive">Sensitive</p></div>
+							<hr color="white" width="80%" size="3">
+						</div>
+					</div>
+		
+					<div>
+						<h1>Lorem ipsum</h1>
+						<h2>3 / 5</h2>
+						<div class="choices">
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question3" value="Oily">Oily</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question3" value="Dry">Dry</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question3" value="Normal">Normal</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question3" value="Sensitive">Sensitive</p></div>
+							<hr color="white" width="80%" size="3">
+						</div>
+					</div>
+		
+					<div>
+						<h1>Lorem ipsum</h1>
+						<h2>4 / 5</h2>
+						<div class="choices">
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question4" value="Oily">Oily</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question4" value="Dry">Dry</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question4" value="Normal">Normal</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question4" value="Sensitive">Sensitive</p></div>
+							<hr color="white" width="80%" size="3">
+						</div>
+					</div>
+		
+					<div>
+						<h1>Lorem ipsum</h1>
+						<h2>5 / 5</h2>
+						<div class="choices">
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question5" value="Oily">Oily</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question5" value="Dry">Dry</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question5" value="Normal">Normal</p></div>
+							<div class="choicebox"><div class="placeholder"></div><p><input type="radio" name="question5" value="Sensitive">Sensitive</p></div>
+							<hr color="white" width="80%" size="3">
+						</div>
+					</div>
+		
+					<input type="button" name="" id="submit" value="Submit" onclick="check()">
+		
+				</form>
 
-					<h1>Question 2 heading</h1>
-					<h2>2 / 5</h2>
-					<p>Question related images and text will go here</p>
-					<hr color="white" width="80%" size="3">
-
-					<h1>Question 3 heading</h1>
-					<h2>3 / 5</h2>
-					<p>Question related images and text will go here</p>
-					<hr color="white" width="80%" size="3">
-
-					<h1>Question 4 heading</h1>
-					<h2>4 / 5</h2>
-					<p>Question related images and text will go here</p>
-					<hr color="white" width="80%" size="3">
-
-					<h1>Question 5 heading</h1>
-					<h2>5 / 5</h2>
-					<p>Question related images and text will go here</p>
-					
-					<button>Submit</button>
+				<!-- This div is hidden until user clicks submit button -->
+				<div id="yourresult">
+					<p id="resulthead"></p>
+					<p id="result"></p>
+					<a id="redirect"></a>
+				</div>
 
 				</div>
 			</div>
@@ -48,8 +115,9 @@
 
 
 		<footer>
-			<p>Footer text will go here.</p>
-			<p>Back to top button will go on the bottom right corner (non sticky)</p>
+			<a href="#top">Back to Top<br>&#129041;</a>
+			<h1>Skinclusive</h1>
+			<p>&#169; 2021 Skinclusive. All Rights Reserved</p>
 		</footer>
 	
 	</body>

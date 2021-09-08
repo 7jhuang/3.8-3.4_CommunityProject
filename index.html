@@ -7,19 +7,45 @@
 
 	<body>
 		<header>
-			<p>This will be the nav</p>
+			<a href="index.html" class="logo">Skinclusive</a>
+			<nav name="top">
+				<ul>
+					<li><a href="quiz.html">skin type quiz</a></li>
+					<li class="dropdown"><a href="all-products.html">products &#9662;</a>
+						<div class="dropdown-content">
+							<a href="#">oily skin products</a>
+							<a href="#">dry skin products</a>
+							<a href="#">combo skin products</a>
+							<a href="#">sensitive skin products</a>
+						</div>
+					</li>
+					<li class="dropdown"><a href="article-list.html">articles &#9662;</a>
+						<div class="dropdown-content">
+							<a href="#">oily skin articles</a>
+							<a href="#">dry skin articles</a>
+							<a href="#">combo skin articles</a>
+							<a href="#">sensitive skin articles</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		
 		<div class="wrapper">
-			<!-- This box contains the large image and text first seen on page-->
+			<!-- This box contains the large image and text first seen on page -->
 			<div class="box1">
-				<p>This will be an image</p>
 				<h1>Skinclusive<br>inclusive of your skin.</h1>
 			</div>
 			
 			<!-- This box contains the main text on the screen when you scroll down-->
 			<div class="box2">
-				<p>Text will go here</p>
+				<p>Let’s face it. Skin care can be a tricky thing to get right. But the truth is, it’s a completely different 
+					journey for everyone. There’s no holy grail solution that works perfect for everybody.
+					<br>
+					<br>What skin care goals do you want to work towards? Even skin tone? Blemish-free skin? Plump, hydrated skin?
+					<br>
+					<br>Skinclusive is a skincare company focused on helping you reach your skin care goals by providing 
+					useful resources on common skin issues and recommending products based on your skin type.</p>
 			</div>
 			
 			<!-- This is the individual text box-->
@@ -29,13 +55,15 @@
 			
 			<!-- These are the boxes containing the two images side by side -->
 			<div class="left">
-				<p>This will be an image</p>
-				<p>This box will have buttons and text</p>
+				<h1>New to skincare?</h1>
+				<p>Find out your skin type here</p>
+				<a href="quiz.html">TAKE THE QUIZ</a>
 			</div>
 			
 			<div class="right">
-				<p>This will be an image</p>
-				<p>This box will have buttons and text</p>
+				<h1>Have a skin concern?</h1>
+				<p>Read more articles about common skin issues here</p>
+				<a href="article-list.html">SKINCARE ARTICLES</a>
 			</div>
 
 			<!-- This is the individual text box-->
@@ -46,24 +74,25 @@
 			<div class="similar">
 				<!-- Flexbox to divide the three recommended articles easier-->
 				<div class="flex-container">
-					<div class="flex-child"><p>Image will go here</p></div>
-					<div class="flex-child"><p>Image will go here</p></div>
-					<div class="flex-child"><p>Image will go here</p></div>
+					<div class="flex-child"></div>
+					<div class="flex-child"></div>
+					<div class="flex-child"></div>
 				</div>
 				
 				<!-- Flexbox to divide text evenly -->
 				<div class="flex-container2">
-					<div class="flex-child2"><p>Article title</p></div>
-					<div class="flex-child2"><p>Article title</p></div>
-					<div class="flex-child2"><p>Article title</p></div>
+					<div class="flex-child2"><a href="#">Article title</a></div>
+					<div class="flex-child2"><a href="#">Article title</a></div>
+					<div class="flex-child2"><a href="#">Article title</a></div>
 				</div>
 			</div>
 
 		</div>
 
 		<footer>
-			<p>Footer text will go here.</p>
-			<p>Back to top button will go on the bottom right corner (non sticky)</p>
+			<a href="#top">Back to Top<br>&#129041;</a>
+			<h1>Skinclusive</h1>
+			<p>&#169; 2021 Skinclusive. All Rights Reserved</p>
 		</footer>
 	
 	</body>
